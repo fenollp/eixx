@@ -1,0 +1,25 @@
+language: cpp
+compiler:
+  - gcc
+# - clang
+
+# sudo: false
+
+before_install:
+  - sudo apt-get update -qq
+
+after_install:
+  - sudo apt-get -y install libboost-all-dev
+
+before_script:
+  - set -e
+  - echo $LANG
+  - echo $LC_ALL
+
+script:
+  - ./bootstrap
+  - ./configure --with-boost=/usr/lib
+  - make
+
+after_script:
+  - make test
