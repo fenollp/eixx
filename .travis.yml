@@ -16,7 +16,7 @@ before_script:
 
 script:
   - ./bootstrap
-  - ./configure --with-boost=/usr/lib
+  - ./configure
   - make
 
 after_script:
