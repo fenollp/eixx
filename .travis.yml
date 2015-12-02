@@ -3,7 +3,7 @@ compiler:
   - gcc
 # - clang
 
-sudo: false
+sudo: required
 dist: trusty
 
 before_install:
