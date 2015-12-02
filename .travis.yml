@@ -3,7 +3,8 @@ compiler:
   - gcc
 # - clang
 
-# sudo: false
+sudo: false
+dist: trusty
 
 before_install:
   - sudo apt-get update -qq
